@@ -37,7 +37,7 @@ const BookNow = () => {
     
     // Initialize Razorpay
     const options = {
-      key: 'YOUR_RAZORPAY_KEY', // Replace with your Razorpay key
+      key: 'rzp_test_IDx1KRc2nR8kJ7', // Replace with your Razorpay key
       amount: 50000, // Amount in paise (₹500.00)
       currency: 'INR',
       name: 'Paradise Beach Cottage',
@@ -53,7 +53,7 @@ const BookNow = () => {
       prefill: {
         name: formData.name,
         email: formData.email,
-        contact: formData.phone
+        contact: 8525846677,
       },
       theme: {
         color: '#3B82F6'
