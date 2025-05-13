@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "start": "vite",
+    "prebuild": "chmod +x node_modules/.bin/vite",
     "build": "npx vite build",
     "lint": "eslint .",
     "preview": "vite preview"
