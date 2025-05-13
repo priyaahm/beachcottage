@@ -14,13 +14,20 @@ const Payment = () => {
       return;
     }
 
-    const script = document.createElement("script");
-    script.src = "https://checkout.razorpay.com/v1/checkout.js";
-    script.async = true;
-    script.onload = () => setScriptLoaded(true);
-    document.body.appendChild(script);
-    return () => document.body.removeChild(script);
-  }, []);
+    const existingScript = document.querySelector(
+      'script[src="https://checkout.razorpay.com/v1/checkout.js"]'
+    );
+
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.src = "https://checkout.razorpay.com/v1/checkout.js";
+      script.async = true;
+      script.onload = () => setScriptLoaded(true);
+      document.body.appendChild(script);
+    } else {
+      setScriptLoaded(true);
+    }
+  }, [bookingDetails, navigate]);
 
   const nights = bookingDetails
     ? dayjs(bookingDetails.checkOut).diff(dayjs(bookingDetails.checkIn), "day")
@@ -29,8 +36,13 @@ const Payment = () => {
   const amount = (bookingDetails?.price || 0) * nights * 100;
 
   const handlePayment = () => {
+    if (!window.Razorpay) {
+      alert("Payment SDK not loaded. Please try again.");
+      return;
+    }
+
     const options = {
-      key: "rzp_test_IDx1KRc2nR8kJ7",
+      key: "rzp_test_IDx1KRc2nR8kJ7", // ✅ Use env variable in production
       amount,
       currency: "INR",
       name: "Paradise Beach Cottage",
@@ -86,6 +98,3 @@ const Payment = () => {
 };
 
 export default Payment;
-git add .
-git commit -m "Update project with Razorpay fix"
-git push
