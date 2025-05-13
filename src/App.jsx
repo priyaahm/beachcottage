@@ -5,7 +5,7 @@ import HeroSection from "./components/HeroSection";
 import AboutUs from "./components/AboutUs";
 import PhotoGallery from "./components/PhotoGallery";
 import BookNow from "./components/BookNow";
-import Payment from "./components/payment";
+import Payment from "./components/Payment";
 import BookingConfirmation from "./components/BookingConfirmation";
 import Footer from "./components/Footer";
 
