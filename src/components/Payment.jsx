@@ -86,3 +86,6 @@ const Payment = () => {
 };
 
 export default Payment;
+git add .
+git commit -m "Update project with Razorpay fix"
+git push
