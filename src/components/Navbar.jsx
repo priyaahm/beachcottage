@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Gallery', href: '#gallery' },
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Gallery", href: "#gallery" },
   ];
 
   return (
@@ -18,7 +19,7 @@ const Navbar = () => {
               <span className="text-2xl font-bold text-blue-600">Paradise Beach Cottage</span>
             </div>
           </div>
-          
+
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
@@ -30,12 +31,12 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <a
-              href="#book-now"
+            <Link
+              to="/booking"
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md text-sm font-medium transition duration-300"
             >
               Book Now
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -45,7 +46,7 @@ const Navbar = () => {
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none"
             >
               <svg
-                className={`${isOpen ? 'hidden' : 'block'} h-6 w-6`}
+                className={`${isOpen ? "hidden" : "block"} h-6 w-6`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -54,7 +55,7 @@ const Navbar = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
               <svg
-                className={`${isOpen ? 'block' : 'hidden'} h-6 w-6`}
+                className={`${isOpen ? "block" : "hidden"} h-6 w-6`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -68,7 +69,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
+      <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navLinks.map((link) => (
             <a
@@ -79,16 +80,16 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a
-            href="#book-now"
+          <Link
+            to="/booking"
             className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 block text-center"
           >
             Book Now
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
   );
 };
 
-export default Navbar; 
+export default Navbar;
