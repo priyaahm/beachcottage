@@ -55,7 +55,7 @@ Tamil Nadu 605101, India</p>
             <h3 className="text-xl font-bold mb-4">Location</h3>
             <div className="h-48 bg-gray-800 rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.789012345678!2d-118.12345678901234!3d34.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDA3JzI0LjQiTiAxMTjCsDA3JzI0LjQiVw!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952099.776213851!2d76.38634058948205!3d14.685854736819802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5366a66822014b%3A0x9c192a8677dd8601!2s290%2C%20Auroville%20Rd%2C%20Auroville%2C%20Kuilapalayam%2C%20Bommayapalayam%2C%20Tamil%20Nadu%20605101%2C%20India!5e0!3m2!1sen!2sus!4v1747640435312!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
