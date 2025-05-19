@@ -12,7 +12,7 @@ const BookNow = () => {
     guests: 1,
     roomType: "standard",
     roomName: "Standard Room",
-    price: 1000, // Price per night in ₹
+    price: 15000, // Price per night in ₹
   });
 
   const handleChange = (e) => {
