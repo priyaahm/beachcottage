@@ -45,7 +45,7 @@ const BookNow = () => {
             </select>
             <input type="date" name="checkIn" value={formData.checkIn} onChange={handleChange} required className="border p-2 rounded" />
             <input type="date" name="checkOut" value={formData.checkOut} onChange={handleChange} required className="border p-2 rounded" />
-            <input type="number" name="guests" value={formData.guests} onChange={handleChange} min="1" max="4" required className="border p-2 rounded" />
+            <input type="number" name="guests" value={formData.guests} onChange={handleChange} min="1" max="15" required className="border p-2 rounded" />
           </div>
 
           <div className="text-center">
